@@ -1,8 +1,8 @@
 class Score < ActiveRecord::Base
+  belongs_to :user
 
   def seconds(end_time, start_time)
-    elapsed_seconds = ((end_time - start_time) * 24 * 60 * 60).to_i
+    elapsed_seconds = (end_time - start_time).to_i
   end
-
 
 end
