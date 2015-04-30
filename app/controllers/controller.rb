@@ -1,5 +1,7 @@
+require 'sinatra/json'
+
 get '/scores' do
-   Score.all.map { |score| score.to_json }.to_json
+   json(Score.all.map { |score| score.to_json })
 end
 
 post '/scores' do
@@ -9,11 +11,11 @@ post '/scores' do
 
   if user = User.find_by_username(username)
     user.scores.create(score: score)
-    return {username: username, score: score}.to_json
+    return json({username: username, score: score})
   else
     user = User.create(username: username)
     user.scores.create!(score: score)
-    return {username: username, score: score}.to_json
+    return json({username: username, score: score})
   end
 end
 
