@@ -1,3 +1,4 @@
+```
 # minesweeper-high-score-server
 
 Base uri: https://still-sea-1226.herokuapp.com/
@@ -24,3 +25,4 @@ Response: [
               score: 234
             }
           ]
+```
