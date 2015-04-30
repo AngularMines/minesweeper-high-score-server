@@ -1,5 +1,5 @@
 get '/scores' do
-   Score.all.to_json
+   Score.all.map { |score| score.to_json }.to_json
 end
 
 post '/scores' do
