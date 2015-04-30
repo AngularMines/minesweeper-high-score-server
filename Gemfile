@@ -8,6 +8,7 @@ gem 'rack', '1.5.2'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-json'
+gem "sinatra-cross_origin", "~> 0.3.1"
 
 gem 'activesupport'
 gem 'activerecord'
