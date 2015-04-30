@@ -6,4 +6,8 @@ class Score < ActiveRecord::Base
   #   self.save
   # end
 
+  def to_json
+    {name: User.find_by(id: self.user_id).username, time: self.score, created_at: self.created_at}
+  end
+
 end

@@ -45,7 +45,7 @@ describe 'user controller' do
           user.scores.create(score: Faker::Number.number(3))
          end
         get '/scores'
-        expect(last_response.body.class).to eq(String)
+        expect(last_response.body).to eq(Score.all.to_json)
       end
 
       it "should return empty array json if not score" do
