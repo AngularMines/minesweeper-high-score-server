@@ -13,6 +13,9 @@ gem 'activerecord'
 
 gem 'rake'
 
+gem 'json'
+
+
 gem 'shotgun'
 
 group :test do
@@ -20,6 +23,7 @@ group :test do
   gem 'rack-test'
   gem 'rspec'
   gem 'capybara'
+  gem 'byebug'
 end
 
 group :test, :development do
